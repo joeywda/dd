@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="test.js"></script>
+    <script>
+        document.write("Javascript1");
+
+        document.write("Javascript2");
+        document.write("Javascript3");
+        document.write("Javascript4");
+        // alert("中斷點4");
+        console.log("中斷點4");
+        document.write("Javascript5");
+
+        function test() {
+            let a = 500;
+            console.log(a);
+            let b = "HELLO WORLD";
+            let c = 'HELLO WORLD';
+            console.log(c);
+            let d = true;
+            console.log(d);
+            let e;
+            console.log(e);
+            console.log(f);
+        }
+    </script>
+</head>
+
+<body>
+    <a href="javascript:alert('這樣也可以')">請按我</a><br>
+    <input type="button" value="請按我" onclick="test();">
+
+</body>
+
+</html>
