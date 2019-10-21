@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/jquery-2.2.4.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('button').click(function () {
+                $(this).closest('ul').parent().next().css('color', 'red');
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <ol>
+        <li>
+            <ul>
+                <li><button type="button">CLICK</button></li>
+                <li>Apple</li>
+                <li>Banana</li>
+            </ul>
+        </li>
+        <li>Apple</li>
+        <li>Banana</li>
+    </ol>
+</body>
+
+</html>

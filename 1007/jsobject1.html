@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let objarr = [];
+        objarr = [
+            {
+                height: 180,
+                weight: 70,
+                int: ['吃飯', '睡覺', '看電影'],
+                exp: ['釣魚', '電腦']
+            }
+        ];
+        console.log('身高: ' + objarr[0].height);
+        console.log('體重: ' + objarr[0].weight);
+        console.log('興趣: ');
+        objarr.forEach(function (data) {
+            console.log(data);
+            data.int.forEach(function (a) {
+                console.log(a);
+            });
+        });
+        console.log('專長: ');
+        objarr.forEach(function (data) {
+            console.log(data);
+            data.exp.forEach(function (a) {
+                console.log(a);
+            });
+        });
+
+        for (var index in objarr) {
+            console.log(objarr[index].int);
+            for (var i in objarr[index].int) {
+                console.log(objarr[index].int[i]);
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>

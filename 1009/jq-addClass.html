@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+    <style>
+        .red {
+            color: red;
+        }
+
+        .blue {
+            color: blue;
+        }
+    </style>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#list').addClass('red');
+            $("#list li:last").addClass('blue');
+
+            $('div').hide();
+        });
+    </script>
+</head>
+
+<body>
+    <div>Hide me!</div>
+    <div>Hide me too!</div>
+    <h2>TITLE</h2>
+    <ul id="foo">
+        <li></li>
+    </ul>
+    <ol id="list">
+        <li>JS</li>
+        <li>Jqery</li>
+        <li>CSS</li>
+        <li>HTML</li>
+    </ol>
+</body>
+
+</html>

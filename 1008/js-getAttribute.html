@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/jquery-2.2.4.js"></script>
+    <script>
+        $(document).ready(function () {
+            console.log($('#title').attr("id"));
+            console.log($('#title').attr("data-key"));
+            console.log($('#title').attr("data-value"));
+        });
+    </script>
+</head>
+
+<body>
+    <h1 id="title" data-key="777" data-value="666"></h1>
+    <script>
+        let t = document.getElementById('title');
+        console.log(t.getAttribute("id"));
+        console.log(t.getAttribute("data-key"));
+        console.log(t.getAttribute("data-value"));
+    </script>
+</body>
+
+</html>

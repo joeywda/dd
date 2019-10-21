@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/jquery-2.2.4.js"></script>
+
+    <script>
+        function jqCss() {
+            // $('#title1').css('color', 'red');
+            $('#title1').get(0).style.color = "red";
+            $('#title1').css('background-color', '#665574');
+            $('#title1').css('height', '100px');
+            $('#title1').css('width', '300px');
+            $('#title1').css({
+                'text-shadow': 'gray 4px 4px',
+                'font-size': '3em'
+            });
+        }
+
+        $(document).ready(function () {
+            $('#qq').click(function () {
+                jqCss();
+            });
+
+            $('#title1').bind('click', myfun1 = function () {
+                jqCss();
+            });
+
+            $("#qq1").click(function () {
+                console.log("ok");
+                $("#title1").unbind("click", myfun1);
+            });
+
+
+
+        });
+    </script>
+
+</head>
+
+<body>
+    <h1 id="title">HELLO WORLD</h1>
+    <h2 id="title1">HOW ARE YOU</h2>
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+    <div class="box">box4</div>
+    <button onclick="jsCss();">JS Click</button>
+    <button onclick="removevent();">移除 h1 監聽</button><br>
+    <button id="qq">JQ Click</button>
+    <button id="qq1">移除 h2 監聽</button><br>
+    <script>
+        var title = document.getElementById('title');
+        title.addEventListener('click', myfun = function () {
+            jsCss();
+        });
+
+        function removevent() {
+            document.getElementById('title').removeEventListener("click", myfun);
+        }
+        function jsCss() {
+            console.log('jsCSS');
+
+            title.style.color = "red";
+            title.style.backgroundColor = "#665574";
+            title.style.height = "100px";
+            title.style.width = "300px";
+        }
+    </script>
+</body>
+
+</html>

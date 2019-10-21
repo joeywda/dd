@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/jquery-2.2.4.js"></script>
+    <script>
+        $(document).ready(function () {
+            // $('#title1').css('color', 'red');
+            $('#title1').get(0).style.color = "red";
+            $('#title1').css('background-color', '#665574');
+            $('#title1').css('height', '100px');
+            $('#title1').css('width', '300px');
+            $('#title1').css({
+                'text-shadow': 'gray 4px 4px',
+                'font-size': '3em'
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1 id="title">HELLO WORLD</h1>
+    <h2 id="title1">HOW ARE YOU</h2>
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+    <div class="box">box4</div>
+
+    <script>
+        let title = document.getElementById('title');
+        console.log(title.style);
+        title.style.color = "red";
+        title.style.backgroundColor = "#665574";
+        title.style.height = "100px";
+        title.style.width = "300px";
+
+    </script>
+</body>
+
+</html>

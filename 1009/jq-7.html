@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/jquery-2.2.4.js"></script>
+    <script>
+        $(document).ready(function () {
+            max = $('textarea').attr("maxlength");
+            console.log(max);
+            $('.remains').text(max);
+            $('textarea').keyup(function (params) {
+                console.log("keyup");
+                current = $(this).val().length;
+                console.log(current);
+                $('#current').text(max - current);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <textarea name="" id="" maxlength="50" rows="20" cols="30"></textarea>
+    <p>Remain: <span class="remains" id="current"></span> / <span class="remains" id="max"></span> </p>
+</body>
+
+</html>
